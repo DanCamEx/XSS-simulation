@@ -1,0 +1,5 @@
+/login_site/node_modules
+/news_site/node_modules
+
+/news_site/sqlite.db
+/login_site/sqlite.db

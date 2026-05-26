@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Tech News</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: #ffffff;
+        min-height: 100vh;
+        font-family: "Inter", sans-serif;
+      }
+      .site-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+      .comment-card {
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .comment-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+      .input-field,
+      .textarea-field {
+        transition:
+          border-color 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .input-field:focus,
+      .textarea-field:focus {
+        border-color: #7c3aed;
+        box-shadow: 0 0 5px rgba(124, 58, 237, 0.5);
+        outline: none;
+      }
+      .btn-submit {
+        transition:
+          background-color 0.3s ease,
+          transform 0.2s ease;
+      }
+      .btn-submit:hover {
+        background-color: #6d28d9;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bg-red-600 text-white">
+      <div class="flex items-center px-6 py-4">
+        <h1 class="text-3xl font-bold uppercase mr-10">IL MONDO DEL TECH</h1>
+        <nav class="hidden sm:flex items-center space-x-6">
+          <a
+            href="#"
+            class="text-base md:text-lg font-extrabold hover:underline"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="text-base md:text-lg font-extrabold hover:underline"
+            >Hardware</a
+          >
+          <a
+            href="#"
+            class="text-base md:text-lg font-extrabold hover:underline"
+            >Software</a
+          >
+          <a
+            href="#"
+            class="text-base md:text-lg font-extrabold hover:underline"
+            >Recensioni</a
+          >
+          <a
+            href="#"
+            class="text-base md:text-lg font-extrabold hover:underline"
+            >Contatti</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <div class="site-container">
+      <article class="p-8 mb-10">
+        <span class="inline-block bg-red-600 text-white text-xs font-bold px-3 py-1 rounded mb-4">NEWS</span>
+        <h2 class="text-4xl font-bold text-center text-gray-900 mb-6">
+          Dall'ultimo Google I/O i nuovi modelli Google Pixel 20a in anteprima
+        </h2>
+        <p class="text-center text-gray-600 mb-4 italic">
+          25 maggio 2026 | Di Marco Rossini
+        </p>
+        <div class="prose max-w-none text-gray-700 leading-relaxed">
+          <p class="mb-4">
+            Durante la conferenza Google I/O di maggio, il colosso della ricerca
+            ha svelato in anteprima i nuovi modelli della linea Pixel 20a. Con
+            questa nuova generazione, Google continua a spingere i confini della
+            fotografia computazionale e dell'intelligenza artificiale integrata
+            nei dispositivi mobili.
+          </p>
+          <p class="mb-4">
+            I Pixel 20a presentano un design completamente rinnovato, con una
+            fotocamera principale migliorata e nuove capacità di elaborazione
+            delle immagini in tempo reale. Il processore Tensor di ultima
+            generazione garantisce prestazioni superiori nei compiti di machine
+            learning locale.
+          </p>
+          <img src="pixel20a.jpg" alt="Google Pixel 20a" class="w-full rounded-lg shadow-md mb-6" />
+          <p class="mb-4">
+            La disponibilità commerciale è prevista per il prossimo trimestre,
+            con prezzi che rimangono competitivi rispetto alla generazione
+            precedente. Ma lasciamo che i numeri parlino da soli: le specifiche
+            tecniche del Pixel 20a rappresentano un salto generazionale
+            impressionante. Con il nuovo processore Tensor 4, GPU rivoluzionaria
+            e un'unità NPU dedicata, questo dispositivo non è solo uno
+            smartphone, è un laboratorio di intelligenza artificiale nel vostro
+            tasca. La batteria da 6000 mAh supporta ricarica a 120W, garantendo
+            che anche i gamer più incalliti possano giocare per ore senza ansia.
+            La fotocamera triple setup con sensore da 200MP nel principale, 50MP
+            per gli ultra-grandangoli e 12MP per lo zoom periscpoio da 10x è
+            semplicemente spettacolare. Il display OLED da 6.8 pollici con
+            refresh rate di 240Hz è talmente fluido che farà sembrare il vostro
+            TV una diapositiva statica.
+          </p>
+
+          <table
+            class="w-full border-collapse border border-gray-300 mb-6 mt-6"
+          >
+            <thead>
+              <tr class="bg-red-600 text-white">
+                <th class="border border-gray-300 p-3 text-left font-bold">
+                  Spec
+                </th>
+                <th class="border border-gray-300 p-3 text-left font-bold">
+                  Dettagli
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="hover:bg-gray-100">
+                <td class="border border-gray-300 p-3 font-semibold">
+                  Processore
+                </td>
+                <td class="border border-gray-300 p-3">
+                  Google Tensor 4 + GPU Mali-G710 MP10
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-100">
+                <td class="border border-gray-300 p-3 font-semibold">RAM</td>
+                <td class="border border-gray-300 p-3">12GB LPDDR5X</td>
+              </tr>
+              <tr class="hover:bg-gray-100">
+                <td class="border border-gray-300 p-3 font-semibold">
+                  Storage
+                </td>
+                <td class="border border-gray-300 p-3">256GB/512GB UFS 4.0</td>
+              </tr>
+              <tr class="hover:bg-gray-100">
+                <td class="border border-gray-300 p-3 font-semibold">
+                  Display
+                </td>
+                <td class="border border-gray-300 p-3">
+                  OLED 6.8" FHD+ 2400x1080, 240Hz
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-100">
+                <td class="border border-gray-300 p-3 font-semibold">
+                  Fotocamera Principale
+                </td>
+                <td class="border border-gray-300 p-3">
+                  200MP, f/1.8, OIS, Sensor-Shift
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-100">
+                <td class="border border-gray-300 p-3 font-semibold">
+                  Fotocamera Ultra-wide
+                </td>
+                <td class="border border-gray-300 p-3">
+                  50MP, f/2.2, 114° FoV
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-100">
+                <td class="border border-gray-300 p-3 font-semibold">
+                  Zoom Periscope
+                </td>
+                <td class="border border-gray-300 p-3">
+                  12MP, f/2.8, 10x Zoom Ibrido
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-100">
+                <td class="border border-gray-300 p-3 font-semibold">
+                  Batteria
+                </td>
+                <td class="border border-gray-300 p-3">
+                  6000 mAh, Ricarica 120W + Wireless 50W
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-100">
+                <td class="border border-gray-300 p-3 font-semibold">
+                  Connettività
+                </td>
+                <td class="border border-gray-300 p-3">
+                  5G, WiFi 7, Bluetooth 5.4, NFC
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-100">
+                <td class="border border-gray-300 p-3 font-semibold">Prezzo</td>
+                <td class="border border-gray-300 p-3 font-bold text-red-600">
+                  €1.099 (256GB), €1.299 (512GB)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="mt-6 text-gray-700 text-lg">
+            In conclusione, il Google Pixel 20a rappresenta l'apice della
+            ricerca di Google nel mobile computing. Non è solo un telefono, è
+            una dichiarazione d'intenti: l'azienda vuole dominare il mercato con
+            l'intelligenza artificiale, e questo dispositivo ne è la prova
+            vivente. Certo, il prezzo non è proprio accessibile a tutti, ma per
+            chi vuole il top della tecnologia senza compromessi, il Pixel 20a è
+            praticamente obbligatorio. Preparatevi: il 15 giugno il pre-order
+            inizia ufficialmente.
+          </p>
+        </div>
+      </article>
+
+      <section class="mb-10">
+        <h2 class="text-2xl font-semibold text-gray-700 mb-6">Commenti</h2>
+        <div class="space-y-6">
+          <% if (errorMessage) { %>
+            <div class="bg-red-50 border border-red-200 text-red-700 rounded-lg p-4">
+              <%= errorMessage %>
+            </div>
+          <% } %>
+          <div
+            class="comment-form bg-white shadow-lg rounded-lg p-6 border border-black"
+          >
+            <h3 class="text-xl font-semibold text-gray-700 mb-4">
+              Aggiungi il tuo commento
+            </h3>
+            <form method="POST" action="/comment" class="space-y-4">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-600"
+                  >Nome</label
+                >
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  required
+                  class="input-field w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring focus:ring-black-200"
+                />
+              </div>
+              <div>
+                <label for="message" class="block text-sm font-medium text-gray-600"
+                  >Il tuo commento</label
+                >
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="3"
+                  required
+                  class="textarea-field w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring focus:ring-black-200"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="btn-submit w-full bg-red-600 text-white font-semibold py-3 rounded-lg hover:bg-red-700"
+              >
+                Pubblica Commento
+              </button>
+            </form>
+          </div>
+
+          <% if (comments && comments.length > 0) { %>
+            <% comments.forEach((comment) => { %>
+              <div
+                class="comment-card bg-white shadow-md rounded-lg p-6 border border-black"
+              >
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                  <%- comment.name %>
+                </h3>
+                <p class="text-gray-700"><%- comment.message %></p>
+              </div>
+            <% }) %>
+          <% } else { %>
+            <div class="bg-white shadow-md rounded-lg p-6 border border-black text-gray-600">
+              Nessun commento disponibile.
+            </div>
+          <% } %>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

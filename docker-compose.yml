@@ -1,0 +1,26 @@
+services:
+  news_site:
+    build:
+      context: ./news_site
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - SQLITE_PATH=/app/sqlite.db
+      - PORT=3000
+    volumes:
+      - ./news_site:/app
+      - /app/node_modules
+
+  login_site:
+    build:
+      context: ./login_site
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    environment:
+      - SQLITE_PATH=/app/sqlite.db
+      - PORT=3001
+    volumes:
+      - ./login_site:/app
+      - /app/node_modules
