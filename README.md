@@ -32,7 +32,6 @@ Il progetto è composto da due web server totalmente isolati e containerizzati c
 - Scorrere fino alla sezione di inserimento dei commenti.
 - Inserire un valore qualsiasi nel campo "Nome".
 - Nel campo "Il tuo commento" copiare e incollare lo script presente nel file `script.js` nel progetto.
-  ```
 - Cliccare su **Pubblica Commento**.
 
 Il payload viene memorizzato nel database. Da questo momento, il rendering della pagina richiamerà anche questo commento dal database ed eseguirà lo script sul browser di ogni utente che lo andrà a visitare.

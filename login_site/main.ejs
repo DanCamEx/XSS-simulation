@@ -8,27 +8,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      color-scheme: light;
-      --bg: #f1f3f4;
-      --panel: #ffffff;
-      --panel-border: #dadce0;
-      --text: #202124;
-      --muted: #5f6368;
-      --link: #1a73e8;
-      --button: #e8f0fe;
-      --button-text: #1a73e8;
-      --input-border: #dadce0;
-    }
-
     * { box-sizing: border-box; }
 
     html, body {
       margin: 0;
-      min-height: 100%;
-      background: var(--bg);
+      background: #f1f3f4;
       font-family: 'Inter', sans-serif;
-      color: var(--text);
+      color: #202124;
     }
 
     body {
@@ -42,10 +28,10 @@
 
     .card {
       width: min(100%, 960px);
-      background: var(--panel);
+      background: #ffffff;
       border-radius: 28px;
       padding: 32px 36px 28px;
-      border: 1px solid var(--panel-border);
+      border: 1px solid #dadce0;
       box-shadow: 0 10px 30px rgba(60,64,67,0.12);
     }
 
@@ -84,19 +70,15 @@
       margin: 18px 0 0;
       font-size: 1.02rem;
       line-height: 1.5;
-      color: var(--text);
-    }
-
-    .form-wrap {
-      padding-left: 8px;
+      color: #202124;
     }
 
     .field {
       width: 100%;
       height: 48px;
-      border: 1px solid var(--input-border);
+      border: 1px solid #dadce0;
       background: #fff;
-      color: var(--text);
+      color: #202124;
       border-radius: 4px;
       padding: 0 16px;
       font-size: 1rem;
@@ -107,15 +89,19 @@
       color: #80868b;
     }
 
+    .field + .field {
+      margin-top: 14px;
+    }
+
     .field:focus {
-      border-color: var(--link);
-      box-shadow: 0 0 0 1px var(--link) inset;
+      border-color: #1a73e8;
+      box-shadow: 0 0 0 1px #1a73e8 inset;
     }
 
     .link {
       margin-top: 10px;
       display: inline-block;
-      color: var(--link);
+      color: #1a73e8;
       font-size: 0.92rem;
       font-weight: 500;
       text-decoration: none;
@@ -123,15 +109,24 @@
 
     .small-copy {
       margin: 28px 0 0;
-      color: var(--muted);
+      color: #5f6368;
       font-size: 0.92rem;
       line-height: 1.5;
     }
 
     .small-copy a {
-      color: var(--link);
+      color: #1a73e8;
       text-decoration: none;
       font-weight: 600;
+    }
+
+    .error-message {
+      margin-bottom: 12px;
+      background: #ffecec;
+      border: 1px solid #f5c6cb;
+      color: #a94442;
+      padding: 10px;
+      border-radius: 6px;
     }
 
     .actions {
@@ -140,13 +135,6 @@
       align-items: center;
       justify-content: flex-end;
       gap: 22px;
-    }
-
-    .secondary-link {
-      color: var(--link);
-      font-size: 0.98rem;
-      font-weight: 500;
-      text-decoration: none;
     }
 
     .primary-btn {
@@ -159,7 +147,6 @@
       font-weight: 700;
       cursor: pointer;
       min-width: 84px;
-      box-shadow: none;
     }
 
     .primary-btn:hover {
@@ -172,7 +159,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 18px 8px 0;
-      color: var(--muted);
+      color: #5f6368;
       font-size: 0.82rem;
     }
 
@@ -183,7 +170,7 @@
     }
 
     .footer a {
-      color: var(--muted);
+      color: #5f6368;
       text-decoration: none;
     }
 
@@ -195,10 +182,6 @@
       .grid {
         grid-template-columns: 1fr;
         gap: 24px;
-      }
-
-      .form-wrap {
-        padding-left: 0;
       }
 
       .actions {
@@ -230,7 +213,6 @@
         align-items: stretch;
       }
 
-      .secondary-link,
       .primary-btn {
         width: 100%;
         text-align: center;
@@ -254,16 +236,15 @@
         <p class="subtitle">Utilizza il tuo Account Google</p>
       </section>
 
-      <section class="form-wrap">
+      <section>
         <% if (errorMessage) { %>
-          <div style="margin-bottom:12px;background:#ffecec;border:1px solid #f5c6cb;color:#a94442;padding:10px;border-radius:6px;">
+          <div class="error-message">
             <%= errorMessage %>
           </div>
         <% } %>
 
         <form method="POST" action="/login">
           <input class="field" type="email" name="email" id="email" placeholder="Email" autocomplete="username" required />
-          <div style="height:14px;"></div>
           <input class="field" type="password" name="password" id="password" placeholder="Password" autocomplete="current-password" required />
           <a class="link" href="#">Non ricordi l'indirizzo email?</a>
 

@@ -40,7 +40,7 @@ app.get("/", async (request, reply) => {
     request.log.error(err);
     return reply.view("main.ejs", {
       comments: [],
-      errorMessage: "Errore caricamento recensioni",
+      errorMessage: "Errore caricamento commenti",
     });
   }
 });
@@ -72,7 +72,7 @@ app.post("/comment", async (request, reply) => {
     const comments = db.prepare("SELECT * FROM comments ORDER BY id DESC").all();
     return reply.view("main.ejs", {
       comments,
-      errorMessage: "Errore durante il salvataggio della recensione. Riprova.",
+      errorMessage: "Errore durante il salvataggio del commento. Riprova.",
     });
   }
 });
