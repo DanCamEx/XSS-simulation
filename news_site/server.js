@@ -61,6 +61,10 @@ app.post("/comment", async (request, reply) => {
   }
 
   try {
+    // POSSIBILE SANITIZZAZIONE
+    // const sanitizeHtml = require ( 'sanitize-html' );
+    // const cleanMessage = sanitizeHtml ( message , { allowedTags : [] ,
+    // allowedAttributes : {} }) ;
     db.prepare("INSERT INTO comments (name, message) VALUES (?, ?)").run(
       name,
       message,
